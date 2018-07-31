@@ -1,0 +1,63 @@
+
+data <- read.csv(file="excel.csv", header=TRUE, sep=",")
+
+library(gmodels)
+attach(data)
+View(data)
+names(data)
+
+#creating table 
+
+margin.table(prop.table(table(ZONE)),1)
+margin.table(prop.table(table(STATE)),1)
+margin.table(prop.table(table(CHEQUE.BOUNCE)),1)
+margin.table(prop.table(table(DEALER.YEARS)),1)
+margin.table(prop.table(table(PHONE.NUMBER)),1)
+margin.table(prop.table(table(EMAIL.ADDRESS)),1)
+margin.table(prop.table(table(Q1016)),1)
+margin.table(prop.table(table(Q2016)),1)
+margin.table(prop.table(table(Q3016)),1)
+margin.table(prop.table(table(Q4016)),1)
+margin.table(prop.table(table(Q1017)),1)
+margin.table(prop.table(table(Q2017)),1)
+margin.table(prop.table(table(Q3017)),1)
+margin.table(prop.table(table(Q4017)),1)
+margin.table(prop.table(table(Q1018)),1)
+margin.table(prop.table(table(CREDITABILITY)),1)
+
+
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),1)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),2)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),3)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),4)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),5)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),6)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),7)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),8)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),9)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),10)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),11)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),12)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),13)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),14)
+margin.table(prop.table(table(ZONE,STATE, CHEQUE.BOUNCE,DEALER.YEARS,PHONE.NUMBER,EMAIL.ADDRESS, Q1016,Q2016,Q3016,Q4016, Q1017,Q2017,Q3017,Q4017,Q1018)),15)
+
+#install library gmodels
+CrossTable(CREDITABILITY, DEALER.YEARS, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY,CHEQUE.BOUNCE, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, ZONE, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, EMAIL.ADDRESS, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, PHONE.NUMBER, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, STATE, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, Q1016, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, Q2016, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, Q3016, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, Q4016, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, Q1017, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, Q2017, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, Q3017, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, Q4017, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+CrossTable(CREDITABILITY, Q1018, digits=1, prop.r=F, prop.t=F, prop.chisq=F, chisq=T)
+
+
+
