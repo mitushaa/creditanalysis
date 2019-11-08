@@ -5,10 +5,6 @@ library(gmodels)
 attach(data)
 View(data)
 names(data)
-
-#creating table 
-# Adding new tables which classifies all the zones
-
 margin.table(prop.table(table(ZONE)),1)
 margin.table(prop.table(table(STATE)),1)
 margin.table(prop.table(table(CHEQUE.BOUNCE)),1)
